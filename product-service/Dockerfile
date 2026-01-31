@@ -1,5 +1,5 @@
 # product-service/Dockerfile
-FROM maven:3.8.6-openjdk-17-slim AS builder
+FROM registry.access.redhat.com/ubi8/openjdk-17:1.18 AS builder
 WORKDIR /app
 COPY pom.xml .
 RUN mvn dependency:go-offline -B
